@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -53,34 +54,10 @@ public class PopularMovieAdapter extends ArrayAdapter {
         URL mPosterURL = null;
 
         if (convertView == null) {
-            imageView = new ImageView(mContext);
-
-
-            DisplayMetrics displayMetrics = new DisplayMetrics();
-            ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-            int imageHeight = 560, imageWidth = 370;
-            if (((Activity) getContext()).getResources().getConfiguration().orientation == ORIENTATION_LANDSCAPE) {
-
-                imageHeight = displayMetrics.heightPixels / 2;
-                imageWidth = displayMetrics.widthPixels / 2;
-            }else {
-
-                imageHeight = displayMetrics.heightPixels;
-                imageWidth = displayMetrics.widthPixels / 4;
-
-            }
-
-
-
-            /*imageView.setLayoutParams(new GridView.LayoutParams(370, 560));*/
-            imageView.setLayoutParams(new GridView.LayoutParams(imageWidth, imageHeight - 80));
-            //imageView.setLayoutParams(new GridView.LayoutParams(imageWidth, imageHeight - 80));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            //imageView.setPadding(8, 8, 8, 8);
-        } else {
-            imageView = (ImageView) convertView;
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.image_view,parent,false);
         }
 
+        imageView = (ImageView) convertView.findViewById(R.id.poster_image);
         if (movieList.size() == 0) {
             return null;
         }
@@ -93,7 +70,7 @@ public class PopularMovieAdapter extends ArrayAdapter {
             e.printStackTrace();
         }
 
-        Picasso.with(mContext).load(mPosterURL.toString()).into(imageView);
+        Picasso.with(mContext).load(mPosterURL.toString()).fit().into(imageView);
 
 
         return imageView;
