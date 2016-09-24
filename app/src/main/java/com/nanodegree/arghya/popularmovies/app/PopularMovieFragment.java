@@ -3,10 +3,12 @@ package com.nanodegree.arghya.popularmovies.app;
 import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,6 +40,7 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
     //Using v4 fragment library since minSdkVersion is 10, and Fragments were introduced
     // in Android 11
 
+    final String LOG_TAG = PopularMovieFragment.class.getSimpleName();
     PopularMovieAdapter mAdapter;
     ArrayList<MovieDetails> mList;
     GridView gridView;
@@ -75,7 +78,6 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
     public void onAttach(Context context) {
 
         //Since   setRetainInstance(true) - onAttach() , onActivityCreated(), onDetach() will be called.
-
          super.onAttach(context);
 
 
@@ -85,6 +87,7 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        Log.d(LOG_TAG,"onActivity:: List is getting restored");
         if(mList != null) {
             mAdapter = new PopularMovieAdapter(getActivity(), 0, mList);
             gridView.setAdapter(mAdapter);
@@ -92,12 +95,21 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
 
     }
 
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        getPopularMovies();
+    }
 
     private void getPopularMovies() {
 
         FetchMovieListsTask fetchMovieTask = new FetchMovieListsTask();
-        fetchMovieTask.execute(PopularMoviesUtilis.SORT_ORDER_POPULAR);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        String mSortOrder = sharedPref.getString(getString(R.string.setting_sort_key),
+                getString(R.string.setting_sort_most_popular_value));
+        //fetchMovieTask.execute(PopularMoviesUtilis.SORT_ORDER_POPULAR);
+        fetchMovieTask.execute(mSortOrder);
 
     }
 
@@ -168,6 +180,7 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
             try {
 
                 try {
+                    Log.d(LOG_TAG,"Parmas = "+params[0]);
                     mUrl = PopularMoviesUtilis.getMovieURL(params[0]);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();

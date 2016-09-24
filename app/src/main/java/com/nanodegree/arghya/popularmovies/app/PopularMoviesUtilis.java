@@ -13,8 +13,8 @@ import java.net.URL;
 public class PopularMoviesUtilis {
 
     static final String POPULAR_MOVIES_BASE_URL = "https://api.themoviedb.org/3/movie/";
-    static final String SORT_ORDER_POPULAR = "popular";
-    static final String SORT_ORDER_TOP_RATED = "top_rated";
+    //static final String SORT_ORDER_POPULAR = "popular";
+    //static final String SORT_ORDER_TOP_RATED = "top_rated";
     static final String API_KEY = "api_key";
 
     static final String POPULAR_MOVIES_POSTER_BASE_URL = "http://image.tmdb.org/t/p/w185";
