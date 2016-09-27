@@ -1,17 +1,11 @@
 package com.nanodegree.arghya.popularmovies.app;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -19,11 +13,6 @@ import com.squareup.picasso.Picasso;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-
-import static android.support.v4.print.PrintHelper.ORIENTATION_LANDSCAPE;
-import static android.support.v4.print.PrintHelper.ORIENTATION_PORTRAIT;
-import static com.nanodegree.arghya.popularmovies.app.PopularMoviesUtilis.getPosterURL;
 
 /**
  * Created by arghyadip on 21/9/16.

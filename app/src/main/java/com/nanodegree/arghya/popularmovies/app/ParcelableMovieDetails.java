@@ -2,9 +2,6 @@ package com.nanodegree.arghya.popularmovies.app;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.ArrayAdapter;
-
-import static java.lang.System.in;
 
 /**
  * Created by arghyadip on 26/9/16.

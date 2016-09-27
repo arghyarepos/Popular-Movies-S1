@@ -1,13 +1,10 @@
 package com.nanodegree.arghya.popularmovies.app;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-
-import static android.R.attr.value;
 
 /**
  * Created by arghyadip on 25/9/16.

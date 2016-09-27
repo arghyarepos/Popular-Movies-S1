@@ -1,27 +1,13 @@
 package com.nanodegree.arghya.popularmovies.app;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import static com.nanodegree.arghya.popularmovies.app.PopularMovieFragment.PARCEL_KEY;
 
 public class PopularMovieMainActivity extends AppCompatActivity {
 
@@ -63,7 +49,6 @@ public class PopularMovieMainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.sort_order:
                 //Launching settings activity/Fragment based of version.
-                Toast.makeText(this, "Sort", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, SettingsActivity.class));
                 break;
         }

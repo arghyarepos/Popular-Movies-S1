@@ -1,19 +1,14 @@
 package com.nanodegree.arghya.popularmovies.app;
 
-import android.annotation.TargetApi;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,9 +29,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
-import static android.os.Build.VERSION_CODES.M;
 import static android.util.Log.d;
 
 /**
@@ -114,11 +107,9 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
 
 
         Log.d(LOG_TAG, "MovieFragment :: onActivity- List is getting restored");
-        if (mList != null && isConnected()) {
+        if (mList != null) {
             mAdapter = new PopularMovieAdapter(getActivity(), 0, mList);
             gridView.setAdapter(mAdapter);
-        } else {
-            showNoNetworkToast();
         }
 
     }
@@ -204,7 +195,7 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
                 mDetails.posterThumbnail = mEachMovieObject.getString(MOVIE_POSTER_TAG).toString().split("/")[1];
                 mDetails.backDrop = mEachMovieObject.getString(MOVIE_BACKDROP_PATH_TAG).toString().split("/")[1];
 
-                d(LOG_TAG, "List poster = " + i + " " + mDetails.posterThumbnail);
+                //Log.d(LOG_TAG, "List poster = " + i + " " + mDetails.posterThumbnail);
                 mDetails.userRating = mEachMovieObject.getString(MOVIE_RATING_TAG);
 
                 //Adding each element
@@ -312,7 +303,7 @@ public class PopularMovieFragment extends android.support.v4.app.Fragment {
                     mAdapter.add(movie);
                 }*/
 
-                if (mList != null) {
+                if (mList != null && getActivity() != null) {
                     mAdapter = new PopularMovieAdapter(getActivity(), 0, mList);
                 }
 
