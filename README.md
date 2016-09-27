@@ -2,8 +2,14 @@
 Project 1 : Nanodegree Stage 1
 
 Disclaimer: 
-This project is part of Udacity Nanodegree program. For solutions, I have consulted Udacity forums, Stackoverflow 
-and blog posts.
+This project is part of Udacity Nanodegree program. For solutions, I have consulted Udacity forums, Stackoverflow, 
+Android official documentation and blog posts.
+
+Links: To name a few
+http://stackoverflow.com/questions/1560788/how-to-check-internet-access-on-android-inetaddress-never-times-out
+http://stackoverflow.com/questions/31451739/collapsingtoolbarlayout-not-collapsing-when-using-scrollview-and-nestedscrollvi/39719562#39719562
+Udacity video lectures and codes as reference.
+
 
 To run this program please add your API key in the app build.gradle file:
 buildTypes.each {
