@@ -6,15 +6,16 @@ package com.nanodegree.arghya.popularmovies.app;
 
 public class MovieDetails {
 
-    public String movieID="";
+    public String movieID = "";
     public String movieTitle = "";
     public String posterThumbnail = "";
     public String movieOverview = "";
     public String userRating = "";
     public String releaseDate = "";
+    public String backDrop = "";
 
 
-    public void MovieDetails(String id,String title, String thumbnail, String overview, String rating, String date) {
+    public void MovieDetails(String id, String title, String thumbnail, String overview, String rating, String date, String backDrop) {
 
         this.movieID = id;
         this.movieTitle = title;
@@ -22,6 +23,7 @@ public class MovieDetails {
         this.movieOverview = overview;
         this.userRating = rating;
         this.releaseDate = date;
+        this.backDrop = backDrop;
 
     }
 

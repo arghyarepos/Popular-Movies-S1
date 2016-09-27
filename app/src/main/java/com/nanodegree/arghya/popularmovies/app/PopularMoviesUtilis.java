@@ -28,18 +28,18 @@ public class PopularMoviesUtilis {
 
         URL mUrl = new URL(mUriMovies.toString());
 
-        Log.d("URL","URL = "+ mUrl.toString());
+        //Log.d("URL","URL = "+ mUrl.toString());
         return mUrl;
 
     }
 
     public static URL getPosterURL(String posterPath) throws MalformedURLException {
 
-        Uri mUriMovies = Uri.parse(POPULAR_MOVIES_POSTER_BASE_URL+"/"+posterPath).buildUpon().build();
+        Uri mUriMovies = Uri.parse(POPULAR_MOVIES_POSTER_BASE_URL + "/" + posterPath).buildUpon().build();
 
         URL mUrl = new URL(mUriMovies.toString());
 
-        Log.d("URL","URL Poster = " + mUrl.toString());
+        //Log.d("URL","URL Poster = " + mUrl.toString());
         return mUrl;
 
     }

@@ -2,7 +2,9 @@ package com.nanodegree.arghya.popularmovies.app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,7 +56,7 @@ public class PopularMovieAdapter extends ArrayAdapter {
         URL mPosterURL = null;
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.image_view,parent,false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.image_view, parent, false);
         }
 
         imageView = (ImageView) convertView.findViewById(R.id.poster_image);

@@ -4,7 +4,6 @@
     <string name="settings">Settings</string>
 
 
-
     <string name="setting_sort">Sort Movies</string>
     <string name="setting_sort_key">sort_movies</string>
 
@@ -13,6 +12,11 @@
 
     <string name="setting_sort_top_rated">Top Rated</string>
     <string name="setting_sort_top_rated_value">top_rated</string>
+    <string name="title_activity_movie_details">MovieDetailsActivity</string>
 
+    <string name="string_release_date">Initial Release</string>
+
+    <string name="string_no_connection">No Internet Connectivity!!</string>
+    <string name="string_retry">Retry</string>
 
 </resources>
