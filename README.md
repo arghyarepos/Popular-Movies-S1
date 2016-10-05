@@ -15,3 +15,10 @@ To run this program please add your API key in the app build.gradle file:
 buildTypes.each {
             it.buildConfigField 'String', 'POPULAR_MOVIES_API_KEY', "YOUR_KEY"
         }
+
+
+Screen shots:
+
+https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=0
+
+https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png?dl=0
