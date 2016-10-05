@@ -20,7 +20,7 @@ buildTypes.each {
 Screen shots:
 
 
-<img src="https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=1" width="350" height="500" /> | <img src="https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png?dl=1" width="350" height="500" />
+<img src="https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=1" width="300" height="450" />  <img src="https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png?dl=1" width="300" height="450" />
 
 
 ![alt tag](https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png?dl=1 "Movie details Screen")
