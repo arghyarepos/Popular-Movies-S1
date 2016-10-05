@@ -17,11 +17,11 @@ Instructions to run this code:
 ------------------------------
 To run this program please add your API key in the app build.gradle file:
 
-'''java
+```java
 buildTypes.each {
             it.buildConfigField 'String', 'POPULAR_MOVIES_API_KEY', "YOUR_KEY"
         }
-'''
+```
 
 Screens:
 --------
