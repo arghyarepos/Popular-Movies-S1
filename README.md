@@ -7,7 +7,7 @@ Android official documentation and blog posts.
 
 Links: To name a few
 http://stackoverflow.com/questions/1560788/how-to-check-internet-access-on-android-inetaddress-never-times-out
-http://stackoverflow.com/questions/31451739/collapsingtoolbarlayout-not-collapsing-when-using-scrollview-and-nestedscrollvi/39719562#39719562
+<br>http://stackoverflow.com/questions/31451739/collapsingtoolbarlayout-not-collapsing-when-using-scrollview-and-nestedscrollvi/39719562#39719562</br>
 Udacity video lectures and codes as reference.
 
 
@@ -18,6 +18,8 @@ buildTypes.each {
 
 
 Screen shots:
+
+<img src="https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=1" width="48">
 
 ![alt tag](https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=1 "Main Movies Screen")
 
