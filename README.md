@@ -19,6 +19,6 @@ buildTypes.each {
 
 Screen shots:
 
-https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png?dl=0
+![alt tag](https://www.dropbox.com/s/454hcv718emo1kb/device-2016-09-28-010534.png "Main Movies Screen")
 
-https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png?dl=0
+![alt tag](https://www.dropbox.com/s/q51bnxye9v8ield/device-2016-09-28-010457.png "Movie details Screen")
